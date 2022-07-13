@@ -109,7 +109,7 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 
 
 let sum = (a, b, c, d) => a + b + c + d;
-// };
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
@@ -173,12 +173,12 @@ console.log(joe.greeting());
 
 
 
-Student.courseName = function() {
+Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -189,17 +189,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// the object joe in the constructor function
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// this as a global scope
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// arrow functions retain the this value of the enclosing functional scope, for the second instance the this is not reset for the arrow function
