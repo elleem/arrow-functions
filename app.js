@@ -145,7 +145,7 @@ let message = (name) =>{
 console.log(message('Allie'));
 
 
-let Student = (name, age, hometown)=> {
+let Student = function(name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
